@@ -8,13 +8,15 @@ namespace FindGames.Framework.BaseTest
         [SetUp]
         public void Setup()
         {
+            LoggerUtil.Info($"Go to test url: {ConfigUtil.GetValueByName("TestURL")}");
             BrowserUtil.GoToUrl(ConfigUtil.GetValueByName("TestURL"));
         }
 
-        //[TearDown]
-        //public void CloseBrowser()
-        //{
-        //    BrowserUtil.Quit();
-        //}
+        [TearDown]
+        public void CloseBrowser()
+        {
+            LoggerUtil.Info("Close browser");
+            BrowserUtil.Quit();
+        }
     }
 }

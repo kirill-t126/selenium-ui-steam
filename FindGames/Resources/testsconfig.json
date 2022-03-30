@@ -1,4 +1,10 @@
 {
   "WebDriverWaitInSeconds": 15,
-  "FindGame": "Half-Life 3"
+  "FindGame": "Half-Life 3",
+  "MenuOs": "Narrow by OS",
+  "MenuNumberOfPlayers": "Narrow by number of players",
+  "OsCheckbox": "Windows",
+  "NumberOfPlayersCheckbox": "Single-player",
+  "NumberOfGameFromSearchResult": 1,
+  "PriceLimit": 30
 }

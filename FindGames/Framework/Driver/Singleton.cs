@@ -16,5 +16,10 @@ namespace FindGames.Framework.Driver
             }
             return webDriver;
         }
+
+        public static void CloseDriver()
+        {
+            webDriver = null;
+        }
     }
 }

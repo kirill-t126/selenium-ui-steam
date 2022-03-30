@@ -16,7 +16,7 @@ namespace FindGames.Pages
 
         public SteamGame GetGameModel()
         {
-            SteamGame game = new SteamGame();
+            var game = new SteamGame();
             game.Title = productTitle.GetTextFromElement();
             game.ReleaseDate = productReleaseDate.GetTextFromElement();
             game.Price = productPrice.GetAttributeElement("data-price-final");

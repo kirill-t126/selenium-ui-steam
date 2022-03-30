@@ -5,7 +5,7 @@ using OpenQA.Selenium.Interactions;
 
 namespace FindGames.Framework.Base
 {
-    internal class BaseElement
+    internal abstract class BaseElement
     {
         protected readonly By locatorOfElement;
         public string nameOfElement;
@@ -18,6 +18,7 @@ namespace FindGames.Framework.Base
 
         public string GetAttributeElement(string attribute)
         {
+            LoggerUtil.Info($"Get element '{this.nameOfElement}' attribute '{attribute}' ");
             return Singleton.GetInstance().FindElement(locatorOfElement).GetAttribute(attribute);
         }
 
@@ -40,12 +41,14 @@ namespace FindGames.Framework.Base
 
         public void ClickElement()
         {
+            LoggerUtil.Info($"Click element '{this.nameOfElement}'");
             WaiterUtil.UseExplicitWait(locatorOfElement);
             Singleton.GetInstance().FindElement(locatorOfElement).Click();
         }
 
         public string GetTextFromElement()
         {
+            LoggerUtil.Info($"Get element '{this.nameOfElement}' text");
             WaiterUtil.UseExplicitWait(locatorOfElement);
             return Singleton.GetInstance().FindElement(locatorOfElement).Text;
         }

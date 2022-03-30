@@ -13,8 +13,7 @@ namespace FindGames.Pages
         private readonly Button searchButton = new Button(By.XPath("//a[contains(@id,'search')]//img"), "Search button");
 
         public MainPage() : base(By.XPath("//div[@class='gutter_header']/a/img"), "Main Page")
-        {
-        }
+        { }
 
         public void MoveToNewAndNoteworthy() => newAndNoteworthyButton.MoveToElement();
 

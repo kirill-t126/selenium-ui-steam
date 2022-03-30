@@ -21,10 +21,17 @@ namespace FindGames.Pages
         private Label ProductTitle(int numberOfTheSearchResult) => new Label(By.XPath($"//div[@id='search_resultsRows']/a[{numberOfTheSearchResult}]//span[@class='title']"), "Title");
         private Label ProductReleaseDate(int numberOfTheSearchResult) => new Label(By.XPath($"//div[@id='search_resultsRows']/a[{numberOfTheSearchResult}]//div[contains(@class,'released')]"), "Release Date");
         private Label ProductPrice(int numberOfTheSearchResult) => new Label(By.XPath($"//div[@id='search_resultsRows']//a[{(numberOfTheSearchResult)}]//div[@data-price-final]"), "Price");
-        private Label searchingLabel = new Label(By.XPath("//div[@id='search_result_container' and contains(@style,'opacity')]"), "Searching label");
+        private readonly Label searchingLabel = new Label(By.XPath("//div[@id='search_result_container' and contains(@style,'opacity')]"), "Searching label");
+        private readonly Label priceDisplayLabel = new Label(By.XPath("//div[@id='price_range_display']"), "Price display");
 
         public SearchPage() : base(By.XPath("//div[@id='search_results']"), "Search Page")
         { }
+
+        public bool IsPriceChanged(string price)
+        {
+            var test = priceDisplayLabel.GetTextFromElement();
+            return test.Contains(price);
+        }
 
         public bool IsGameInSearchResults(string gameName)
         {
