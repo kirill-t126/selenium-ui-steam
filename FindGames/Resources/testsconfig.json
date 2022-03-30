@@ -1,4 +1,4 @@
 {
-  "WebDriverWaitInSeconds": 10,
+  "WebDriverWaitInSeconds": 15,
   "FindGame": "Half-Life 3"
 }

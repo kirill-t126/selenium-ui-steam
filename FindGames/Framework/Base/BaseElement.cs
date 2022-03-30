@@ -16,6 +16,16 @@ namespace FindGames.Framework.Base
             nameOfElement = name;
         }
 
+        public string GetAttributeElement(string attribute)
+        {
+            return Singleton.GetInstance().FindElement(locatorOfElement).GetAttribute(attribute);
+        }
+
+        public bool ElementIsExist()
+        {
+            return Singleton.GetInstance().FindElements(locatorOfElement).Count > 0;
+        }
+
         public bool ElementIsDisplayed()
         {
             WaiterUtil.UseExplicitWait(locatorOfElement);
