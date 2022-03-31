@@ -1,19 +1,19 @@
 # Small automated UI-test based on Selenium and NUnit. 
 
-#Capabilities:
+Capabilities:
 * Implemented basic framework for working with pages
 * In **Resources/driverconfig.json** you can change browser resolution and available browsers(use "Chrome" or "Firefox" in "BrowserName")
 * WebDriverManager, Loffer are used in solution
 * Singleton and Page Object patterns are used in solution too
 
-#Test case 1
+**Test case 1**
 | Step                                                              | Expected result                              |
 |-------------------------------------------------------------------|----------------------------------------------|
 | Navigate to main page https://store.steampowered.com              | Main page is opened                          |
 | Enter in the search bar 'Half-Life 3'. Click on the search button | Page with search result is opened            |
 | Find game 'Half-Life 3' in the search result                      | 'Half-Life 3' is absent in the search result |
 
-#Test case 2
+**Test case 2**
 | Step                                                                                               | Expected result                                                                                   |
 |----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | Navigate to main page https://store.steampowered.com                                               | Main page is opened                                                                               |
