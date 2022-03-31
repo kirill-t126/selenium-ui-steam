@@ -3,7 +3,7 @@
 Capabilities:
 * Implemented basic framework for working with pages
 * In **Resources/driverconfig.json** you can change browser resolution and available browsers(use "Chrome" or "Firefox" in "BrowserName")
-* WebDriverManager, Loffer are used in solution
+* WebDriverManager, Logger are used in solution
 * Singleton and Page Object patterns are used in solution too
 
 **Test case 1**
